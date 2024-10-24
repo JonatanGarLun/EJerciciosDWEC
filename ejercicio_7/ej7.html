@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <style>
+        div { width: 100px; height: 100px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div id="c1" style="background: red;"></div>
+    <div id="c2" style="background: white;" onmouseover="cambiarColor(event)"></div>
+    <div id="c3" style="background: blue;"></div>
+
+    <script>
+        function cambiarColor(event) {
+            const colorRojo = document.getElementById('c1').style.background;
+            const colorAzul = document.getElementById('c3').style.background;
+
+            if (event.relatedTarget === document.getElementById('c1')) {
+                event.target.style.background = colorRojo;
+            } else if (event.relatedTarget === document.getElementById('c3')) {
+                event.target.style.background = colorAzul;
+            } else {
+                event.target.style.background = 'white';
+            }
+        }
+    </script>
+    
+</body>
+</html>

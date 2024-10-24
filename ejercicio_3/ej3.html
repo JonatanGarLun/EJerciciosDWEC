@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    
+    <form>
+        <input id="precio" type="number">
+        <input id="cantidad" type="number">
+        <input type="button" id="enviar" value="Calcular">
+        <input id="total" readonly>
+    </form>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", function() {
+            const precio = parseFloat(document.getElementById("precio").value);
+            const cantidad = parseFloat(document.getElementById("cantidad").value);
+            const total = precio * cantidad;
+            document.getElementById("total").value = total;
+        });
+    </script>
+
+</body>
+</html>
