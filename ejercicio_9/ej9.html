@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejercicio 8</title>
+        <title>Ejercicio 9</title>
         <style>
             #boton{
                 position: absolute;
@@ -15,7 +15,21 @@
         </style>
     </head>
     <body>
+        
         Primera linea o cabecera
         <div id="boton">Boton</div>
+
+        <script>
+            window.addEventListener('scroll', function() {
+                const boton = document.getElementById('boton');
+
+                if (window.scrollY > 0) {
+                    boton.style.display = 'block';
+                } else {
+                    boton.style.display = 'none'; 
+                }
+            });
+        </script>
+
     </body>
 </html>
